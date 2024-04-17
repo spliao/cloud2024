@@ -4,7 +4,8 @@ import com.atguigu.cloud.entities.Order;
 import com.atguigu.cloud.resp.ResultData;
 import com.atguigu.cloud.serivce.OrderService;
 import jakarta.annotation.Resource;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -20,8 +21,8 @@ public class OrderController {
     /**
      * 创建订单
      */
-    @GetMapping("/order/create")
-    public ResultData create(Order order)
+    @PostMapping("/order/create")
+    public ResultData create(@RequestBody Order order)
     {
         orderService.create(order);
         return ResultData.success(order);

@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 /**
  * @auther zzyy
  * @create 2024-01-04 10:42
+ *
+ * 这个用于验证授权控制，参数名黑白名单控制
  */
 @Component
 public class MyRequestOriginParser implements RequestOriginParser
